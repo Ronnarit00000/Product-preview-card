@@ -127,6 +127,10 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    place-content: center;
+    gap: 1rem;
     font-size: var(--fs-300);
     font-weight: var(--fw-bold);
     color: var(--clr-btn, hsl(0, 0%, 100%));
@@ -134,10 +138,10 @@ body {
 }
 
 .product .btn::before {
-    position: absolute;
     content: url("asset/icon-cart.svg");
-    top: 1rem;
-    right: 13rem;
+    width: 15px;
+    height: 16px;
+    margin-block: auto;
 }
 
 .product .btn:hover,
@@ -173,12 +177,5 @@ body {
     
     .product .product__description {
         padding: 2rem;
-    }
-    
-    .product .btn::before {
-        position: absolute;
-        content: url("asset/icon-cart.svg");
-        top: 1rem;
-        right: 11rem;
     }
 }
