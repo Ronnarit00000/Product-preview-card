@@ -1,0 +1,183 @@
+:root{
+    --ff-base:"Montserrat", serif;
+    --ff-fraunces:"Fraunces", serif;
+
+    --fs-700:2rem;
+    --fs-300:0.875rem;
+    --fs-200:0.75rem;
+
+    --fw-bold:700;
+    --fw-medium:500;
+
+    --clr-primary:hsl(30, 38%, 92%);
+    --clr-secodary:hsl(158, 36%, 37%);
+
+    --clr-shade-900:hsl(158, 42%, 18%);
+
+    --clr-neutral-900:hsl(212, 21%, 14%);
+    --clr-neutral-700:hsl(228, 12%, 48%);
+    --clr-white:hsl(0, 0%, 100%);
+}
+
+
+/* set box-sizing */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* reset margin */
+h1,
+h2,
+h3,
+p,
+picture,
+body{
+    margin: 0;
+}
+
+/* set image default */
+img,
+picture{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Make form elements to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    /* setup for this challenge only */
+    line-height: 1.5;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+
+    font-family: var(--ff-base);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-medium);
+    background-color: var(--clr-primary);
+}
+
+/* product card */
+.product {
+    display: grid;
+    max-width: 21.4375rem; /*343px*/
+    min-height:38.1875rem; /*611px*/
+    border-radius: 10px;
+    color: var(--clr-product);
+    background-color: var(--bg-product);
+}
+
+.product .product__img img{
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+}
+
+/* description  */
+.product .product__description {
+    display: grid;
+    align-content: space-between;
+    padding: 1.5rem;
+}
+
+.product .logo {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.product .title {
+    line-height: 1.1;
+    font-family: var(--ff-fraunces);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-product-title);
+}
+
+.product .price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product .current-price{   
+    font-family: var(--ff-fraunces);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-current-price);
+}
+
+.product .price {
+    font-size: 0.8125rem; /*13px*/
+}
+
+.product .btn {
+    height: 3rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+    color: var(--clr-btn, hsl(0, 0%, 100%));
+    background-color: var(--bg-btn, hsl(228, 12%, 48%));
+}
+
+.product .btn::before {
+    position: absolute;
+    content: url("asset/icon-cart.svg");
+    top: 1rem;
+    right: 13rem;
+}
+
+.product .btn:hover{
+    background-color:var(--clr-btn-hover, hsl(228, 12%, 35%));
+}
+
+/* for cutstom properties of product card*/
+.product:is(.product--default) {
+    --bg-product:var(--clr-white);
+    --clr-product:var(--clr-neutral-700);
+    --clr-product-title:var(--clr-neutral-900);
+    --clr-current-price:var(--clr-secodary);
+}
+
+.product:is(.product--default) .btn {
+    --bg-btn:var(--clr-secodary);
+    --clr-btn:var(--clr-white);
+    --clr-btn-hover:var(--clr-shade-900);
+}
+
+@media (min-width:43rem) {
+    .product {
+        max-width:37.5rem; /*600px*/
+        min-height:28.125rem; /*450px*/
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .product .product__img img{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.625rem;
+    }
+    
+    .product .product__description {
+        padding: 2rem;
+    }
+    
+    .product .btn::before {
+        position: absolute;
+        content: url("asset/icon-cart.svg");
+        top: 1rem;
+        right: 11rem;
+    }
+}

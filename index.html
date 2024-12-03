@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="asset/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- import google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- main style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- start product card -->
+  <section class="product product--default">
+    <!-- use tag picture for select image show on viewport mobile and desktop-->
+    <picture class="product__img">
+      <!-- for desktop viewport(min-width: 343px * 2) -->
+      <source srcset="asset/image-product-desktop.jpg" media="(min-width: 686px)">
+      <!-- for mobile viewport  -->
+      <img src="asset/image-product-mobile.jpg" alt="">
+    </picture>
+
+    <!-- description -->
+    <aside class="product__description">
+      <p class="logo">Perfume</p>
+      <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price">
+        <p class="current-price">$149.99</p>
+        <p><del>$169.99</del></p>
+      </div>
+      <button class="btn" type="button">Add to Cart</button>
+    </aside>
+
+  </section>
+  <!-- end product cad compoment -->
+
+</body>
+</html>
