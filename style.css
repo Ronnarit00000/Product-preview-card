@@ -56,7 +56,7 @@ select {
 
 body {
     /* setup for this challenge only */
-    line-height: 1.5;
+    /* line-height: 1.5; */
     min-height: 100dvh;
     display: grid;
     place-items: center;
