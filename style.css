@@ -87,7 +87,6 @@ body {
 .product .product__description {
     display: grid;
     grid-template-rows: max-content;
-    gap:1rem;
     padding: 1.5rem;
 }
 
@@ -98,7 +97,7 @@ body {
 }
 
 .product .title {
-    align-self: start;
+    align-self: center;
     line-height: 1.1;
     font-family: var(--ff-fraunces);
     font-size: var(--fs-700);
@@ -107,7 +106,7 @@ body {
 }
 
 .product .info {
-    align-self: start;
+    align-self: center;
 }
 
 .product .price{
