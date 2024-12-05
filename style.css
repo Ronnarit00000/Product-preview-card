@@ -56,7 +56,7 @@ select {
 
 body {
     /* setup for this challenge only */
-    /* line-height: 1.5; */
+    line-height: 1.5;
     min-height: 100dvh;
     display: grid;
     place-items: center;
@@ -86,7 +86,7 @@ body {
 /* description  */
 .product .product__description {
     display: grid;
-    align-content: space-between;
+    grid-template-rows: max-content;
     padding: 1.5rem;
 }
 
@@ -96,6 +96,7 @@ body {
 }
 
 .product .title {
+    margin-block-start: 1rem;
     line-height: 1.1;
     font-family: var(--ff-fraunces);
     font-size: var(--fs-700);
@@ -103,8 +104,13 @@ body {
     color: var(--clr-product-title);
 }
 
+.product p {
+    align-self: center;
+}
+
 .product .price{
     display: flex;
+    align-self: end;
     align-items: center;
     gap: 1rem;
 }
@@ -121,6 +127,8 @@ body {
 }
 
 .product .btn {
+    align-self: end;
+
     height: 3rem;
     border: none;
     outline: none;
