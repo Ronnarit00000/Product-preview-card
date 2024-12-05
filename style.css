@@ -56,7 +56,7 @@ select {
 
 body {
     /* setup for this challenge only */
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100dvh;
     display: grid;
     place-items: center;
@@ -86,41 +86,55 @@ body {
 /* description  */
 .product .product__description {
     display: grid;
-    align-content: space-between;
+    grid-template-rows: max-content;
+    gap:1rem;
     padding: 1.5rem;
 }
 
 .product .logo {
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+    font-size:0.75rem;
+    align-self: start;
 }
 
 .product .title {
-    line-height: 1.1;
+    align-self: center;
+    line-height: 1;
     font-family: var(--ff-fraunces);
     font-size: var(--fs-700);
     font-weight: var(--fw-bold);
     color: var(--clr-product-title);
 }
 
+.product .info {
+    align-self: end;
+}
+
 .product .price{
-    display: flex;
-    align-items: center;
+    align-self: end;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
     gap: 1rem;
 }
 
-.product .current-price{   
+.product .price .current-price{
+    align-self: center;   
     font-family: var(--ff-fraunces);
     font-size: var(--fs-700);
     font-weight: var(--fw-bold);
     color: var(--clr-current-price);
 }
 
-.product .price {
-    font-size: 0.8125rem; /*13px*/
+.product .price .old-price {
+    align-self: center;
 }
 
 .product .btn {
+    align-self: end;
+
     height: 3rem;
     border: none;
     outline: none;
