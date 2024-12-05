@@ -56,7 +56,7 @@ select {
 
 body {
     /* setup for this challenge only */
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100dvh;
     display: grid;
     place-items: center;
@@ -99,7 +99,7 @@ body {
 }
 
 .product .title {
-    align-self: start;
+    align-self: center;
     line-height: 1;
     font-family: var(--ff-fraunces);
     font-size: var(--fs-700);
@@ -108,11 +108,11 @@ body {
 }
 
 .product .info {
-    align-self: center;
+    align-self: end;
 }
 
 .product .price{
-    align-self: center;
+    align-self: end;
 
     display: grid;
     grid-auto-flow: column;
