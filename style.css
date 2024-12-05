@@ -99,7 +99,7 @@ body {
 }
 
 .product .title {
-    align-self: center;
+    align-self: start;
     line-height: 1;
     font-family: var(--ff-fraunces);
     font-size: var(--fs-700);
